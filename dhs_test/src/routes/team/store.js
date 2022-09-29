@@ -19,3 +19,10 @@ export const personImages = derived (api_data, ($api_data) => {
     return [];
 
 });
+
+export const personDescription = derived(api_data, ($api_data) =>{
+    if ($api_data.data){
+        return $api_data.data.map(desc => desc.description_cv)
+    };
+    return [];
+})

@@ -8,7 +8,7 @@
 
 import Nav from "$lib/components/+nav.svelte";
 import {onMount} from "svelte";
-import {api_data, personNames, personImages} from "./store.js"
+import {api_data, personNames, personImages, personDescription} from "./store.js"
 
 onMount(async() => {
    fetch ("https://bi6ewrih.directus.app/items/keynotes_person")
@@ -51,6 +51,12 @@ onMount(async() => {
             <img src={"https://bi6ewrih.directus.app/assets/" + pic} alt="">
         {/each}
 
+    </ul>
+
+    <ul>
+        {#each $personDescription as desc}
+            <li>{desc}</li>
+        {/each}
     </ul>
 </main>
 
