@@ -7,13 +7,18 @@
     import Savethedate from "$lib/components/+savethedate.svelte";
     import Venue from "$lib/components/+venue.svelte";
     import Footer from "$lib/components/+footer.svelte";
+
 </script>
 
 <slot></slot>
 
 
 <style>
-
+@font-face {
+    font-family: 'Untitled-Sans';
+    src: url("/static/fonts/UntitledSans-Medium.otf");
+    font-weight: 500
+}
 
     /*
   1. Use a more-intuitive box-sizing model.
@@ -39,6 +44,9 @@
   5. Improve text rendering
 */
 :global(body) {
+  font-family: "Untitled-Sans";
+  background-color: black;
+  color: white;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }

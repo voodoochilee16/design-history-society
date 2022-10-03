@@ -1,18 +1,34 @@
+
+<script>
+import {onMount} from "svelte";
+import {api_data, personNames, personImages, personDescription} from "/src/routes/team/store.js";
+
+
+
+   onMount(async() => {
+   fetch ("https://bi6ewrih.directus.app/items/keynotes_person")
+   .then(response => response.json())
+   .then(data => {
+    console.log(data);
+    api_data.set(data);
+   }).catch(error => {
+    console.log(error);
+    return [];
+   });
+});
+</script>
+
+
 <section class="speakers">
     <header><h1>Speakers</h1></header>
    <div class="speakersimg">
-    <figure>
-        <img src="" alt="">
-        <figcaption>speaker1</figcaption>
-    </figure>
-    <figure>
-        <img src="" alt="">
-        <figcaption>speaker2</figcaption>
-    </figure>
-    <figure>
-        <img src="" alt="">
-        <figcaption>Speaker3</figcaption>
-    </figure>
+    
+        <div class="img_2">
+           
+            {#each $personImages as pic}
+                <img src="{"https://bi6ewrih.directus.app/assets/" + pic}" alt="">
+            {/each}
+        </div>
    </div>
 </section>
 
@@ -27,10 +43,22 @@
         justify-content: center;
         margin-bottom: 1rem;
     }
-    .speakersimg{
+
+    .speakersimg {
         display: flex;
-        gap: 2rem;
         justify-content: center;
+    }
+    .img_2{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    img {
+        height: 250px;
+        width: auto;
     }
 
 </style>

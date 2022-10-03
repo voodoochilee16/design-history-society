@@ -6,6 +6,7 @@
         <p>Displaying design: 
           History, Criticism  
         and curatorial discourses</p>
+        <p>students and citizens </p>
         <p> <strong>2023, Matosinhos, PT</strong> </p>
         <button>Register</button>
     </div>
@@ -15,6 +16,7 @@
 <slot></slot>
 
 <style>
+    
     header {
         display: flex;
         justify-content: center;
@@ -26,7 +28,8 @@
         justify-content: center;
     }
     .descriptionconference{
-        font-size: 1.4rem;
+        font-family: "Untitled-Sans";
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
