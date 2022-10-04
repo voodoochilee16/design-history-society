@@ -3,8 +3,6 @@
     import dayjs from "dayjs";
     import {InlineCalendar} from "svelte-calendar";
 
-    import Calendar from '@event-calendar/core';
-    import TimeGrid from '@event-calendar/time-grid';
 
     let plugins = [TimeGrid];
     let options = {
