@@ -1,26 +1,9 @@
 <script>
-    import {Datepicker} from "/Users/esad-idea/Documents/pauloferreira@esadidea/directus_projects/design history society/dhs_test/node_modules/svelte-calendar"
-    import dayjs from "dayjs";
-    import {InlineCalendar} from "svelte-calendar";
+  
 
 
-    let plugins = [TimeGrid];
-    let options = {
-        view: "timeGridWeek",
-        events : [
-            
-        ]
 
-    };
-    const theme = {
-        calendar: {
-            with: "600px",
-            shadow: '0px 0px 5px rgba(0, 0, 0, 0.25)'
-        }
-    }
-
-    const today = new Date()
-    const tomorrow = dayjs().add(1, "day").toDate();
+    
 </script>
 
 
@@ -33,7 +16,7 @@
     <div class="calendarapp">
 
 
-        <InlineCalendar {theme}></InlineCalendar>
+       
 
 
 

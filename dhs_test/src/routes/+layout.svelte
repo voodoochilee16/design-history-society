@@ -16,7 +16,7 @@
 <style>
 @font-face {
     font-family: 'Untitled-Sans';
-    src: url("/static/fonts/UntitledSans-Medium.otf");
+    src: url("fonts/UntitledSans-Medium.otf");
     font-weight: 500
 }
 
